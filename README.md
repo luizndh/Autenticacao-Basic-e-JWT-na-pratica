@@ -20,6 +20,16 @@ O núcleo deste projeto é a implementação e coexistência de dois dos mais co
 - Admins possuem um endpoint de login dedicado (/api/auth/login) que, se o login for bem-sucedido, gera um token JWT.
 - Este token deve ser enviado no cabeçalho Authorization: Bearer <token> e permite ao admin ter acesso total ao sistema, incluindo a visualização de notas de todos os usuários.
 
+## Outros Conceitos Praticados
+Além do foco em autenticação, o projeto serviu para praticar:
+
+- Spring Security: Configuração de SecurityFilterChain, AuthenticationProvider e filtros customizados (JwtAuthFilter).
+- Spring Data JPA: Mapeamento de entidades (@ManyToOne) e consultas customizadas (@Query).
+ -Tratamento de Exceções Global: Uso de @RestControllerAdvice para retornar erros padronizados (404, 403, 500).
+- HTTPS/TLS: Configuração de um certificado SSL autoassinado (via keytool) para habilitar HTTPS na aplicação.
+- Simulação de DNS: Edição do arquivo hosts local para mapear um domínio customizado (minhaapi.local) para localhost, permitindo testar o certificado SSL.
+- H2 Database: Uso de um banco em memória com inicialização de dados (CommandLineRunner) para testes.
+
 ## 🚀 Tecnologias Utilizadas
 
 - Java 25
