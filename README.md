@@ -22,7 +22,7 @@ O núcleo deste projeto é a implementação e coexistência de dois dos mais co
 
 ## 🚀 Tecnologias Utilizadas
 
-- Java 17+
+- Java 25
 - Spring Boot
 - Spring Security
 - Spring Data JPA (Hibernate)
