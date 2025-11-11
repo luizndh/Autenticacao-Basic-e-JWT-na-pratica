@@ -1,0 +1,30 @@
+# ===================================================================
+# ARQUIVO DE EXEMPLO - PROJETO LEARNING
+#
+# INSTRUÇÕES:
+# 1. Copie este arquivo e renomeie-o para "application.properties".
+# 2. Preencha os valores marcados com <...> com seus segredos locais.
+# 3. Gere o 'keystore.jks' localmente.
+# ===================================================================
+
+# --- Configuração Geral da Aplicação ---
+spring.application.name=learning
+
+
+# --- Configuração do Banco H2 (Em Memória) ---
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=password
+
+
+# --- Configuração do HTTPS/SSL ---
+# Lembre-se de gerar o 'keystore.jks' localmente em 'src/main/resources'
+# O 'keystore.jks' também NÃO deve ser enviado ao Git.
+server.ssl.enabled=true
+server.ssl.key-store=classpath:keystore.jks
+server.ssl.key-store-password=<SUA_SENHA_DO_KEYSTORE_AQUI>
+server.ssl.key-password=<SUA_SENHA_DA_CHAVE_AQUI>
+server.ssl.key-alias=minhaapi
