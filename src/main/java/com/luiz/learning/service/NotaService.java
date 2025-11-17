@@ -93,8 +93,8 @@ public class NotaService {
 
     private Usuario getUsuarioLogado(Authentication auth) {
         String username = auth.getName();
-        return this.usuarioRepository.findByNome(username)
-            .orElseThrow(() -> new UsernameNotFoundException("Usuário de nome " + username + " não encontrado"));
+        return this.usuarioRepository.findByEmail(username)
+            .orElseThrow(() -> new UsernameNotFoundException("Usuário de email " + username + " não encontrado"));
     }
 
     private void checarPermissao(Nota nota, Authentication auth) {

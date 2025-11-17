@@ -22,18 +22,18 @@ public class DataInitializer {
         return args -> {
             // --- Crie o Usuário ADMIN ---
             Usuario admin = new Usuario();
-            admin.setNome("admin");
+            admin.setEmail("admin");
             admin.setSenha(passwordEncoder.encode("admin123"));
             admin.setRole(Role.ADMIN);
 
             // --- Crie o Usuário COMUM ---
             Usuario user = new Usuario();
-            user.setNome("user");
+            user.setEmail("user");
             user.setSenha(passwordEncoder.encode("user123"));
             user.setRole(Role.USER);
 
             Usuario user2 = new Usuario();
-            user2.setNome("user2");
+            user2.setEmail("user2");
             user2.setSenha(passwordEncoder.encode("user123"));
             user2.setRole(Role.USER);
 

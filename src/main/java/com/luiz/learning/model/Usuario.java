@@ -26,7 +26,7 @@ public class Usuario implements UserDetails {
     private Long id;
 
     @Column
-    private String nome;
+    private String email;
 
     @Column
     private String senha;
@@ -36,9 +36,9 @@ public class Usuario implements UserDetails {
 
     public Usuario() {}
 
-    public Usuario(Long id, String nome, String senha) {
+    public Usuario(Long id, String email, String senha) {
         this.id = id;
-        this.nome = nome;
+        this.email = email;
         this.senha = senha;
     }
 
@@ -50,12 +50,12 @@ public class Usuario implements UserDetails {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getEmail() {
+        return email;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getSenha() {
@@ -86,7 +86,7 @@ public class Usuario implements UserDetails {
 
     @Override
     public String getUsername() {
-        return this.nome;
+        return this.email;
     }
 
 }

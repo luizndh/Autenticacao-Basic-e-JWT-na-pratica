@@ -28,3 +28,15 @@ server.ssl.key-store=classpath:keystore.jks
 server.ssl.key-store-password=<SUA_SENHA_DO_KEYSTORE_AQUI>
 server.ssl.key-password=<SUA_SENHA_DA_CHAVE_AQUI>
 server.ssl.key-alias=minhaapi
+
+
+#  --- Configuração do OAuth 2L ---
+spring.security.oauth2.client.registration.google.client-id=seu-client-id
+spring.security.oauth2.client.registration.google.client-secret=seu-client-secret
+spring.security.oauth2.client.registration.google.scope=openid,profile,email
+spring.security.oauth2.client.registration.google.redirect-uri={baseUrl}/login/oauth2/code/{registrationId}
+
+spring.security.oauth2.client.provider.google.authorization-uri=https://accounts.google.com/o/oauth2/v2/auth
+spring.security.oauth2.client.provider.google.token-uri=https://oauth2.googleapis.com/token
+spring.security.oauth2.client.provider.google.user-info-uri=https://www.googleapis.com/oauth2/v3/userinfo
+spring.security.oauth2.client.provider.google.user-name-attribute=sub

@@ -12,7 +12,7 @@ public class UsuarioService {
     @Autowired
     private UsuarioRepository usuarioRepository;
 
-    public Usuario findByNome(String nome) {
-        return this.usuarioRepository.findByNome(nome).orElse(null);
+    public Usuario findByEmail(String email) {
+        return this.usuarioRepository.findByEmail(email).orElse(null);
     }
 }
